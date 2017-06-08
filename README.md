@@ -60,15 +60,15 @@ ansi.reset().blue().blackBg().write('blah').reset().write('\n')
 
 Available colors as functions:
 
-1. black
-2. red
-3. green
-4. yellow
-5. blue
-6. magenta
-7. cyan
-8. white
-9. grey/gray
+1. **black**
+2. **red**
+3. **green**
+4. **yellow**
+5. **blue**
+6. **magenta**
+7. **cyan**
+8. **white**
+9. **grey/gray**
 
 Use the "bright" versions of those by adding suffix "Bright" to the function name.
 
@@ -107,10 +107,10 @@ ansi.hex('#FF0000')
 
 Available styles as functions:
 
-1. bold
-2. italic
-3. underline
-4. inverse
+1. **bold**
+2. **italic**
+3. **underline**
+4. **inverse**
 
 Reset the style by adding suffix "Reset" to the function name.
 
@@ -131,29 +131,29 @@ ansi.boldReset()
 
 Available position functions:
 
-1. up - move cursor up one line, or, pass a number argument to specify line count
-2. down - move cursor down one line, or, pass a number argument to specify line count
-3. forward - move cursor right one column, or, pass a number argument to specify column count
-4. back - move cursor left one column, or, pass a number argument to specify column count
-5. next - move cursor to the beginning (left) one line down, or, pass a number argument to specify line count
-6. previous - move cursor to the beginning (left) one line up, or, pass a number argument to specify line count
-7. left - move cursor to the beginning of the current line, or, pass a number argument to specify the column to move to
-8. clearBelow - clear all screen data below current cursor position
-9. clearAbove - clear all screen data above current cursor position (not history)
-10. clear - clear entire screen (not history)
-11. clearAll - clear entire screen and all scroll history
-12. eraseBefore - erase line content to the left of the cursor position
-13. eraseAfter - erase line content to the right of the cursor position
-14. eraseLine - erase entire current line
-15. scrollUp - scroll up one line, or, specify a number argument to specify how many lines to scroll
-16. scrollDown - scroll down one line, or, specify a number argument to specify how many lines to scroll
-17. save - save current cursor position
-18. restore - restore current cursor position
-19. position - get the current cursor position
-20. hide - hide the cursor
-21. show - show the cursor
-22. restartLine - convenience function to move to the beginning of the line and erase all line content. specify a number argument and it will go to that column and then erase content after that position.
-23. goto - convenience function to move to a specific line and column on the screen (both default to 0)
+1. **up** - move cursor up one line, or, pass a number argument to specify line count
+2. **down** - move cursor down one line, or, pass a number argument to specify line count
+3. **forward** - move cursor right one column, or, pass a number argument to specify column count
+4. **back** - move cursor left one column, or, pass a number argument to specify column count
+5. **next** - move cursor to the beginning (left) one line down, or, pass a number argument to specify line count
+6. **previous** - move cursor to the beginning (left) one line up, or, pass a number argument to specify line count
+7. **left** - move cursor to the beginning of the current line, or, pass a number argument to specify the column to move to
+8. **clearBelow** - clear all screen data below current cursor position
+9. **clearAbove** - clear all screen data above current cursor position (not history)
+10. **clear** - clear entire screen (not history)
+11. **clearAll** - clear entire screen and all scroll history
+12. **eraseBefore** - erase line content to the left of the cursor position
+13. **eraseAfter** - erase line content to the right of the cursor position
+14. **eraseLine** - erase entire current line
+15. **scrollUp** - scroll up one line, or, specify a number argument to specify how many lines to scroll
+16. **scrollDown** - scroll down one line, or, specify a number argument to specify how many lines to scroll
+17. **save** - save current cursor position
+18. **restore** - restore current cursor position
+19. **position** - get the current cursor position
+20. **hide** - hide the cursor
+21. **show** - show the cursor
+22. **restartLine** - convenience function to move to the beginning of the line and erase all line content. specify a number argument and it will go to that column and then erase content after that position.
+23. **goto** - convenience function to move to a specific line and column on the screen (both default to 0)
 
 ```javascript
 // example using default, this will move up one line:
