@@ -98,34 +98,6 @@ describe('test ansi2', function() {
     assert.equal(stream.write, original)
   })
 
-  it('should emit newline events on stream (string)', function() {
-    var newlines = 0
-    var stream = fake()
-    stream.on('newline', function() { newlines++ })
-    var ansi = build(stream)
-    assert(ansi)
-    ansi.write('abc\ndef\n')
-    assert.equal(newlines, 2)
-    assert.equal(ansi.newlines, 2)
-    ansi.write('a\nbc\ndef\n').write('\n')
-    assert.equal(newlines, 6)
-    assert.equal(ansi.newlines, 6)
-  })
-
-  it('should emit newline events on stream (buffer)', function() {
-    var newlines = 0
-    var stream = fake()
-    stream.on('newline', function() { newlines++ })
-    var ansi = build(stream)
-    assert(ansi)
-    ansi.write(Buffer.from('abc\ndef\n'))
-    assert.equal(newlines, 2)
-    assert.equal(ansi.newlines, 2)
-    ansi.write(Buffer.from('a\nbc\ndef\n')).write(Buffer.from('\n'))
-    assert.equal(newlines, 6)
-    assert.equal(ansi.newlines, 6)
-  })
-
   it('should buffer content', function() {
     var stream = fake()
     var ansi = build(stream)
