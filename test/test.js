@@ -164,18 +164,18 @@ describe('test ansi2', function() {
   it('should reset', function() {
     var target = strung()
     var ansi = build(target, {enabled:true})
-    ansi.is.bold = true
-    ansi.is.italic = true
-    ansi.is.underline = true
-    ansi.is.inverse = true
+    ansi.isBold = true
+    ansi.isItalic = true
+    ansi.isUnderline = true
+    ansi.isInverse = true
     ansi.fgCurrent = 123
     ansi.bgCurrent = 123
     ansi.reset()
     assert.equal(target.string, '\x1b[0m')
-    assert.equal(ansi.is.bold, false)
-    assert.equal(ansi.is.italic, false)
-    assert.equal(ansi.is.underline, false)
-    assert.equal(ansi.is.inverse, false)
+    assert.equal(ansi.isBold, false)
+    assert.equal(ansi.isItalic, false)
+    assert.equal(ansi.isUnderline, false)
+    assert.equal(ansi.isInverse, false)
     assert.equal(ansi.fgCurrent, 39)
     assert.equal(ansi.bgCurrent, 49)
   })
@@ -183,18 +183,18 @@ describe('test ansi2', function() {
   it('should reset() w/out writing reset when disabled', function() {
     var target = strung()
     var ansi = build(target, {enabled:false})
-    ansi.is.bold = true
-    ansi.is.italic = true
-    ansi.is.underline = true
-    ansi.is.inverse = true
+    ansi.isBold = true
+    ansi.isItalic = true
+    ansi.isUnderline = true
+    ansi.isInverse = true
     ansi.fgCurrent = 123
     ansi.bgCurrent = 123
     ansi.reset()
     assert.equal(target.string, null)
-    assert.equal(ansi.is.bold, false)
-    assert.equal(ansi.is.italic, false)
-    assert.equal(ansi.is.underline, false)
-    assert.equal(ansi.is.inverse, false)
+    assert.equal(ansi.isBold, false)
+    assert.equal(ansi.isItalic, false)
+    assert.equal(ansi.isUnderline, false)
+    assert.equal(ansi.isInverse, false)
     assert.equal(ansi.fgCurrent, 39)
     assert.equal(ansi.bgCurrent, 49)
   })
@@ -364,7 +364,7 @@ describe('test ansi2', function() {
   it('should not output bold() when already bolded', function() {
     var target = strung()
     var ansi = build(target, {enabled:true})
-    ansi.is.bold = true
+    ansi.isBold = true
     ansi.bold('test')
     assert.equal(target.string, 'test')
   })
@@ -386,7 +386,7 @@ describe('test ansi2', function() {
   it('should not output boldReset() when disabled', function() {
     var target = strung()
     var ansi = build(target, {enabled:false})
-    ansi.is.bold = true
+    ansi.isBold = true
     ansi.boldReset()
     assert.equal(target.string, null)
   })
