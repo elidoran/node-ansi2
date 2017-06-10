@@ -53,6 +53,11 @@ ansi.resetBg()
 
 // all functions are chainable:
 ansi.reset().blue().blackBg().write('blah').reset().write('\n')
+
+// convenience method helps reset before writing a newline
+// to avoid repeatedly writing: .reset().write('\n')
+ansi.bold().blue('some bold blue text').newline()
+    .underline().green('some underlined green text').newline()
 ```
 
 

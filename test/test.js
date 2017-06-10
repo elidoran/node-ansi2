@@ -108,6 +108,15 @@ describe('test ansi2', function() {
     assert.deepEqual(stream.chunks, ['one', 'two', 'three'])
   })
 
+  it('should reset and write a newline from newline()', function() {
+    var target = strung()
+    var ansi = build(target, {enabled:true})
+    ansi.bold().italic().underline().inverse().blue()
+    target.string = ''
+    ansi.newline()
+    assert.equal(target.string, '\x1b[0m\n')
+  })
+
   it('should beep...', function() {
     build(fake(), {enabled:true}).beep()
   })
