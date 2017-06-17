@@ -15,7 +15,13 @@
     "format",
     "formatting",
     "cursor",
-    "terminal"
+    "terminal",
+    "stream",
+    "rgb",
+    "hex",
+    "css",
+    "fluent",
+    "chainable"
   ],
   "scripts": {
     "lint": "eslint --no-eslintrc --config build/eslint/eslint.js lib/index.js",
@@ -24,8 +30,7 @@
     "test6": "nave use 6.11 npm test",
     "test8": "nave use 8.1 npm test",
     "tests": "npm run test4 && npm run test6 && npm run test8",
-    "coverage": "istanbul cover _mocha -- -R spec test/test.js",
-    "coverage-lcov": "istanbul cover _mocha -- -R mocha-lcov-reporter test/test.js"
+    "coverage": "istanbul cover _mocha -- -R spec test/test.js"
   },
   "repository": {
     "type": "git",
